@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#prompt {
+    display: flex;
+    justify-content: center;
+    margin: 10px 5px;
+}
+#root {
+    display: flex;
+    flex-flow: wrap;
+    gap: 0;
+}
+.square {
+    border: 1px solid black;
+    height: 50px;
+    flex-basis: 84.32px;
+}
+.square:hover {
+    cursor: pointer;
+}
+.square-on-hover {
+    background: rgb(0, 100, 200);
+}

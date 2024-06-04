@@ -17,9 +17,9 @@ body {
     height: 100vh;
 }
 .square {
-    border: 1px solid black;
+    border: .5px solid black;
     flex-basis: calc(100% / 16);
-    height: 50px;
+    overflow: hidden;
 }
 .square:hover {
     cursor: pointer;

@@ -14,11 +14,12 @@ body {
     display: flex;
     flex-flow: wrap;
     gap: 0;
+    height: 100vh;
 }
 .square {
     border: 1px solid black;
+    flex-basis: calc(100% / 16);
     height: 50px;
-    flex-basis: 84.32px;
 }
 .square:hover {
     cursor: pointer;

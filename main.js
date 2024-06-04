@@ -2,6 +2,7 @@ const root = document.querySelector('#root');
 const promptButton = document.querySelector('#prompt-button');
 
 
+
 const startPage = () => {
     for(let i = 1; i < 257; i++) {
         createSquare(i);
@@ -9,7 +10,9 @@ const startPage = () => {
     colorSquares();
     promptButton.addEventListener('click', () => {
         let clientAnswer = parseInt(prompt('Change de grid layout'));
-        console.log(clientAnswer);
+        if(clientAnswer) {
+            changeLayout(clientAnswer);
+        }
     });
 }
 
@@ -22,11 +25,17 @@ const createSquare = number => {
 
 const colorSquares = () => {
     const squares = root.querySelectorAll('.square');
-    
     squares.forEach(square => {
         square.addEventListener('mouseover', () => {
             square.classList.add('square-on-hover');
         })
+    })
+}
+
+const changeLayout = (squaresPerRow) => {
+    const squares = root.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.style.flexBasis = `calc(100% / ${squaresPerRow})`;
     })
 }
 
